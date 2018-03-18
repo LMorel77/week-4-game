@@ -8,20 +8,24 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script scr="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
     <title>Crystals Collector</title>
 </head>
 
 <body>
     <!-- Title -->
-    <header id="title">
-        <h1>Crystals Collector!</h1>
+    <header class="title">
+        <h1>&#9826 Crystals Collector &#9826</h1>
     </header>
 
     <div class="wrapper">
 
         <!-- Instructions -->
-        <div id="instructions" class="content">
+        <div class="content panelHeader1">
+            INSTRUCTIONS
+        </div>
+
+        <div class="content instructions">
             <p>You will be given a random number at the start of the game.</p>
             <br>
             <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
@@ -33,19 +37,43 @@
             <br>
             <p>The value of each crystal is hidden from you until you click on it.</p>
             <br>
-            <p>Each time when the game starts, the game will change the values of each crystal.</p>
-        </div>
-
-        <!-- Random Number -->
-        <div id="randomNum" class="content score scoreboard">
-            <h2>77</h2>
+            <p>Each time the game starts, the values of each crystal are changed.</p>
         </div>
 
         <!-- Wins and Losses -->
-        <div id="winsLosses" class="content scoreboard">
-            <p id="wins">Wins: </p>
-            <br>
-            <p id="losses">Losses: </p>
+        <div class="content panelHeader2">
+            WINS
+        </div>
+        <div class="content panelHeader2">
+            LOSSES
+        </div>
+        <div class="contentWrapper">
+            <div class="content scoreboards">
+                <h2 id="wins">0</h2>
+            </div>
+            <div class="content scoreboards">
+                <h2 id="losses">0</h2>
+            </div>
+        </div>
+
+        <!-- Random Number and User Score Headers -->
+        <div class="contentWrapper">
+            <div class="content panelHeader2">
+                RANDOM NUMBER
+            </div>
+            <div class="content panelHeader2">
+                YOUR SCORE
+            </div>
+        </div>
+
+        <!-- Random Number and User Score -->
+        <div class="contentWrapper">
+            <div class="content scoreboards">
+                <h2 id="randomNum">77</h2>
+            </div>
+            <div class="content scoreboards">
+                <h2 id="score">0</h2>
+            </div>
         </div>
 
         <!-- Crystals -->
@@ -64,13 +92,16 @@
             </button>
         </div>
 
-        <!-- Scoring -->
-        <div id="scoreHeader" class="content">
-            Your Total Score:
+        <!-- Message Board -->
+        <div class="contentWrapper">
+            <div class="content panelHeader1 panelHeader2">
+                MESSAGE BOARD
+            </div>
+            <div class="content messageBoard">
+                <h2 id="messages">Welcome!</h2>
+            </div>
         </div>
-        <div class="content score scoreboard">
-            <h2 id="score">0</h2>
-        </div>
+
     </div>
 
 </body>

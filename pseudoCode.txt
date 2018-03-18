@@ -1,0 +1,9 @@
+generate computer random number
+generate crystals random numbers
+diplay computer number
+display user score equal to 0
+display wins and losses equal to 0
+increase score when crystals pressed
+compare computer and user score
+increment wins if user score equals computer number
+increment losses if user score exceeds computer number
