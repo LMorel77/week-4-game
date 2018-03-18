@@ -1,0 +1,73 @@
+body {
+    background: url("../images/crystals1.png");
+    background-size: 100vw 100vh;
+    box-sizing: border-box;
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.button:active {
+    transform: translateY(4px);
+}
+.content {
+    background: lightcyan;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    opacity: .8;
+    padding: 1%;
+}
+.crystals {
+    clear: both;
+    margin-bottom: 1%;
+}
+.crystals img {
+    border-radius: 15px;
+    height: 100px;
+    width: 100px;
+}
+.score {
+    font-size: 51px;
+    line-height: 75px;
+    text-align: center;
+}
+.scoreboard {
+    height: 75px;
+    margin-right: 1%;
+    width: 19%;
+}
+.wrapper {
+    margin: 2.5%;
+}
+#instructions {
+    background: lightcyan;
+    width: 50%;
+}
+#randomNum {
+    float: left;
+    /* font-size: 27px; */
+}
+#scoreHeader {
+    width: 19%;
+}
+#title {
+    background: cadetblue;
+    border-radius: 5px;
+    color: silver;
+    font-size: 48px;
+    line-height: 100px;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    text-align: center;
+    text-shadow: 0 0 15px navy;
+    width: 95%;
+}
+#winsLosses {
+    float: left;
+    font-size: 21px;
+}
