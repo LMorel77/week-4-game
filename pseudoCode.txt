@@ -1,9 +1,29 @@
-generate computer random number
-generate crystals random numbers
-diplay computer number
-display user score equal to 0
-display wins and losses equal to 0
-increase score when crystals pressed
-compare computer and user score
-increment wins if user score equals computer number
-increment losses if user score exceeds computer number
+
+set gameStarted = false
+
+IF gameCounter = false
+	set and print wins, losses, and score equal to 0
+	display message (Welcome! Click a crystal to start.)
+
+generate and print computer random number (between 19 - 120)
+	Math.floor(Math.random() * (max - min + 1)) + min
+	Math.floor(Math.random() * (120 - 19 + 1)) + 19
+	Math.floor(Math.random() * 102) + 19;
+generate crystal random number (x4; between 1 - 12)
+	Math.floor(Math.random() * (max - min + 1)) + min;
+	Math.floor(Math.random() * (12 - 1 + 1)) + 1
+	Math.floor(Math.random() * 12) + 1;
+
+Apply values to crystals
+
+When crystals button is pressed
+	set gameCounter to true
+	increase score
+	compare random number to user score
+	IF score = random number
+		increment wins
+		display message (You WIN!)
+		reset random number, score, and message (Try your luck again!)
+	IF score > random number
+		increment losses
+		reset random number, score, and message (Loser! Try again!)
