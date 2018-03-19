@@ -1,44 +1,79 @@
 $(document).ready(function () {
 
-    var crystalValues = [];
-    var gameStarted = false;
+    var counter = 0;
+    var crystalId = ["#crystal1", "#crystal2", "#crystal3", "#crystal4"];
+    var crystalRandNum = [];
     var losses = 0;
-    var randomNum;
+    var messages = ["No pressure, you got this!", "This is fun right!", "Getting nervous?", "You can do this!", "Squirrel!!!"];
     var score = 0;
     var wins = 0;
 
-    // Random Number Formula: Math.floor(Math.random() * (max - min + 1)) + min
-    
-    function genCrystalRandNum (array) {
-        // Assign random numbers to crystals 
-        var newValues = array;
+    // Function to Generate and Set Computer & Crystal Random Numbers
+    // Formula: Math.floor(Math.random() * (max - min + 1)) + min
+    function genRandNum(array1, array2, intVar) {
         for (var i = 0; i < 4; i++) {
-            newValues[i] = Math.floor(Math.random() * 12) + 1;
+            array1[i] = Math.floor(Math.random() * 12) + 1;
+            $(array2[i]).val(array1[i]);
         };
-        // Why isn't 'return' required?
+        intVar = Math.floor(Math.random() * 102) + 19;
+        return intVar;
     };
 
-    // Generating computer and crystal random numbers
-    randomNum = Math.floor(Math.random() * 102) + 19;
-    genCrystalRandNum(crystalValues);
+    // Generating Computer and Crystal Random Numbers    
+    var computerRandNum = genRandNum(crystalRandNum, crystalId, computerRandNum);
 
-    // Checking Values
-    // console.log("crystalValues[0]: " + crystalValues[0]);
-    // console.log("crystalValues[1]: " + crystalValues[1]);
-    // console.log("crystalValues[2]: " + crystalValues[2]);
-    // console.log("crystalValues[3]: " + crystalValues[3]);
-    // console.log("randomNum: " + randomNum);
-
+    // Printing Default Values
     $("#wins").text(wins);
     $("#losses").text(losses);
-    $("#randomNum").text(randomNum);
+    $("#randomNum").text(computerRandNum);
     $("#score").text(score);
     $("#message").text("Welcome!");
 
-    // $(".button").on("click", function() {
-    //     gameStarted = true;
+    // Game Play
+    $(".button").on("click", function() {
 
-    // })
+        counter++;
+
+        // Message Output - Determined By Counter
+        if (counter == 1) {
+            $("#message").text("Good luck!");
+        } else {
+            for (var i = 0; i < messages.length; i++) {
+                var messageIndex = Math.floor(Math.random() * 5);
+                $("#message").text(messages[messageIndex]);
+            };
+        };
+
+        // Incrementing and Printing Updated Score
+        var crystalValue = parseInt($(this).val());
+        score += crystalValue;        
+        $("#score").text(score);
+
+        // IF User Wins, Execute This Code
+        if (score === computerRandNum) {
+            wins++;
+            score = 0;
+            computerRandNum = genRandNum(crystalRandNum, crystalId, computerRandNum);
+            $("#randomNum").text(computerRandNum);
+            $("#wins").text(wins);
+            $("#score").text(score);
+            if (wins > 1) {
+                $("#message").text("You Win Again! Best of " + (wins + 2) + "?");
+            } else {
+                $("#message").text("You Win! Shall we play again?");
+            };
+        };
+        // IF User Loses, Execute This Code
+        if (score > computerRandNum) {
+            losses++;
+            score = 0;
+            computerRandNum = genRandNum(crystalRandNum, crystalId, computerRandNum);
+            $("#randomNum").text(computerRandNum);
+            $("#losses").text(losses);
+            $("#message").text("Bummer! You lost! Try again?");
+            $("#score").text(score);
+        };
+    });
 
 });
 
