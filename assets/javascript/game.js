@@ -57,6 +57,7 @@ $(document).ready(function () {
             $("#randomNum").text(computerRandNum);
             $("#wins").text(wins);
             $("#score").text(score);
+            // Just Some Messaging
             if (wins > 1) {
                 $("#message").text("You Win Again! Best of " + (wins + 2) + "?");
             } else {
