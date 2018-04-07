@@ -21,7 +21,7 @@ body {
     border-bottom-right-radius: 10px;
     margin-bottom: 1%;
     opacity: .8;
-    padding: 1%;
+    padding: 5px 10px;
     width: 43%;
 }
 .contentWrapper {
