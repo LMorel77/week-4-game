@@ -3,7 +3,7 @@ body {
     background-size: 100vw 100vh;
     box-sizing: border-box;
     color: darkblue;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
 }
 .button {
@@ -38,7 +38,7 @@ body {
     width: 80px;
 }
 .messageBoard {
-    font-size: 35px;
+    font-size: 27px;
     line-height: 25px;
     text-align: center;
 }
@@ -63,7 +63,7 @@ body {
 }
 .scoreboards {
     float: left;
-    font-size: 35px;
+    font-size: 27px;
     line-height: 25px;
     margin-right: 1%;
     text-align: center;
