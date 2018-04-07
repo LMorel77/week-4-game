@@ -1,5 +1,5 @@
 body {
-    background: url("../images/crystals1.png");
+    background: url("../images/crystals4.jpg");
     background-size: 100vw 100vh;
     box-sizing: border-box;
     color: darkblue;
@@ -16,7 +16,7 @@ body {
     transform: translateY(4px);
 }
 .content {
-    background: floralwhite;
+    background: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-bottom: 1%;
@@ -43,7 +43,7 @@ body {
     text-align: center;
 }
 .panelHeader{
-    background: lightyellow;
+    background: darkseagreen;
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
     border-top-left-radius: 10px;
@@ -70,7 +70,7 @@ body {
     width: 20%;
 }
 .title {
-    background: lightgray;
+    background: darkseagreen;
     color: silver;
     font-size: 48px;
     line-height: 100px;
